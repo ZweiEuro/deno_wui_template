@@ -63,9 +63,8 @@ const Application: React.FC = () => {
 
       <p>
         There are two main ways to send data to and from the server, those are documented here: 
-        <p>
+        <br/>
         https://wui.pages.zweieuro.at/core/web-user-interface-docs/docs/usage/node#sending-events
-        </p>
       </p>
 
       <p>
