@@ -2,7 +2,7 @@
 
 /* // sending events
 
-import { sendEvent } from '@wui/web-user-interface-node/hooks';
+import { sendEvent } from 'jsr:@wui/web-user-interface-lib/hooks';
 
 // send the event
 sendEvent('exampleEvent', { value: 12345 });
@@ -11,7 +11,7 @@ sendEvent('exampleEvent', { value: 12345 });
 
 /* receiving events
 
-import { registerEventListener, useEventListener } from '@wui/web-user-interface-node/hooks';
+import { registerEventListener, useEventListener } from 'jsr:@wui/web-user-interface-lib/hooks';
 
 
 // Subscribe to the event
@@ -56,6 +56,7 @@ const Application: React.FC = () => {
         width: '100%',
         fontSize: '1.5em',
       }}
+      data-testid="app"
     >
       <p>
         Welcome to the WUI / Deno template!

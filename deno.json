@@ -4,23 +4,25 @@
     "build": "deno run -A --node-modules-dir=auto npm:vite build",
     "server:start": "deno run -A --node-modules-dir --watch ./server/main.ts",
     "serve": "deno task build && deno task server:start",
-    "test": "deno -A --node-modules-dir=auto npm:vitest -c ./vite.config.ts"
+    "test": "deno -A --node-modules-dir=auto npm:vitest -c ./vite.config.ts",
+    "test:coverage": "deno -A --node-modules-dir=auto npm:vitest run --coverage -c ./vite.config.ts"
   },
   "imports": {
-    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.4",
-    "@oak/oak": "jsr:@oak/oak@^17.1.4",
-    "@std/assert": "jsr:@std/assert@^1.0.11",
-    "@testing-library/jest-dom": "npm:@testing-library/jest-dom@^6.6.3",
-    "@testing-library/react": "npm:@testing-library/react@^16.2.0",
-    "@types/react": "npm:@types/react@^19.0.10",
-    "@vitejs/plugin-react": "npm:@vitejs/plugin-react@^4.3.4",
-    "@wui/web-user-interface-node": "npm:@wui/web-user-interface-node@^2.5.1",
-    "happy-dom": "npm:happy-dom@^17.1.9",
-    "jsdom": "npm:jsdom@^26.0.0",
-    "react-dom": "npm:react-dom@^19.0.0",
-    "react": "npm:react@^19.0.0",
-    "vite": "npm:vite@^6.2.0",
-    "vitest": "npm:vitest@^3.0.7"
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@1.0.4",
+    "@oak/oak": "jsr:@oak/oak@17.1.4",
+    "@std/assert": "jsr:@std/assert@1.0.11",
+    "@testing-library/jest-dom": "npm:@testing-library/jest-dom@6.6.3",
+    "@testing-library/react": "npm:@testing-library/react@16.2.0",
+    "@types/react": "npm:@types/react@19.0.10",
+    "@vitejs/plugin-react": "npm:@vitejs/plugin-react@4.3.4",
+    "@vitest/coverage-istanbul": "npm:@vitest/coverage-istanbul@3.0.8",
+    "@wui/web-user-interface-lib": "jsr:@wui/web-user-interface-lib@3.5.0",
+    "happy-dom": "npm:happy-dom@17.1.9",
+    "jsdom": "npm:jsdom@26.0.0",
+    "react-dom": "npm:react-dom@19.0.0",
+    "react": "npm:react@19.0.0",
+    "vite": "npm:vite@6.2.0",
+    "vitest": "npm:vitest@3.0.8"
   },
   "compilerOptions": {
     "types": [
@@ -28,7 +30,7 @@
       "react-dom",
       "@types/react",
       "@deno-types/react",
-      "@wui/web-user-interface-node"
+      "@wui/web-user-interface-lib"
     ],
     "lib": [
       "dom",
